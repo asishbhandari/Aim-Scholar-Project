@@ -516,6 +516,9 @@ footer ul li a:hover{
         margin-top: 0;
     }
 
+    .categories-left{
+        align-items: center;
+    }
     .header-left p{
         margin-bottom: 1.3rem;
     }
