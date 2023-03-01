@@ -17,3 +17,18 @@ faqs.forEach(faq =>{
     })
 })
 
+// show hide nav bar
+const menu = document.querySelector(".nav-menu");
+const openmenubtn = document.querySelector("#open-menu-btn");
+const closemenubtn = document.querySelector("#close-menu-btn");
+
+openmenubtn.addEventListener('click', ()=>{
+    menu.style.display="flex";
+    closemenubtn.style.display="inline-block";
+    openmenubtn.style.display='none';
+})
+closemenubtn.addEventListener('click', ()=>{
+    menu.style.display="none";
+    closemenubtn.style.display="none";
+    openmenubtn.style.display='inline-block';
+})

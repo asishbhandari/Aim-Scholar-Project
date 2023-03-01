@@ -52,7 +52,7 @@ img{
 
 .btn{
     display: inline-block;
-    padding: 0.6rem 0.8rem;
+    padding: 0.5rem 0.5rem;
     font-size: 1.2rem;
     cursor: pointer;
     text-align: center;
@@ -64,12 +64,11 @@ img{
 
 /* ------------Navigation section-------------- */
 nav{
-    background-color:transparent;
-    width: 100vw;
     height: 5rem;
     position: fixed;
     top: 0;
     z-index: 11;
+    width: 100%;
 }
 
 .scroll{
@@ -93,7 +92,7 @@ nav button{
 .nav-menu{
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .nav-menu a{
@@ -103,11 +102,10 @@ nav button{
 
 .nav-menu a:hover{
     display: inline-block;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    /* font-size: 1rem; */
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
     color: #fff;
     background-color: #f75842;
     border-radius: 15px;
@@ -149,6 +147,7 @@ header{
 
 .categories{
     background-color: var(--color-bg1);
+    height: 29rem;
 }
 
 .categories h1{
@@ -159,7 +158,6 @@ header{
     padding: 4rem 0;
     display: grid;
     grid-template-columns: 40% 60%;
-    height: 29rem;
 }
 
 .categories-left{
@@ -207,7 +205,7 @@ header{
 
  /* ------------Courses section-------------- */
 .courses{
-    margin-top: 9rem;
+    margin-top: 14rem;
 }
 .courses h2{
     text-align: center;
@@ -391,4 +389,166 @@ footer ul li a:hover{
     border-top: 1px solid var(--color-bg);
     padding: 1.5rem 0;
     margin-top: 1rem;
+}
+
+/* ----------media querry (tablet)----------- */
+@media only screen and (max-width: 1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    /* h1{ font-size: 2.2rem;}
+    h2{ font-size: 1.7rem;}
+    h3{ font-size: 1.4rem;}
+    h4{ font-size: 1.2rem;} */
+/* ------nav bar------ */
+    nav button{
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    nav button#close-menu-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        width: 12rem;
+        height: fit-content;
+        flex-direction: column;
+        gap: 0;
+        display: none; 
+    }
+
+    .nav-menu li{
+        width: 100%;
+        height: 3rem;
+    }
+    .nav-menu li a{
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        border-radius: 0%;
+    }
+    .nav-menu li a:hover{
+        background: var(--color-danger);
+        border-radius: 0%;
+    }
+
+/* ------header------ */
+    header{
+        height: 60vh;
+        margin-bottom: 5rem;
+    }
+
+    .header-container{
+        gap: 0;
+        padding-bottom: 2rem;
+    }
+
+    .header-left h1{
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+    .header-left p{
+        margin: 0.8rem 0 1.2rem;
+    }
+    .btn-header {
+        box-shadow: 0 5px rgb(155, 130, 248);
+        font-size: 1rem;
+       }
+
+/* ------categoriesS------ */
+    .categories{
+        height: auto;
+       }
+    .categories-container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+/* ------courses------ */
+    .courses{
+        margin-top: 2rem;
+    }
+    .courses-container{
+        grid-template-columns: 1fr 1fr;
+    }
+/* ------faqs------ */
+    .faqs-container{
+        grid-template-columns: 1fr;
+    }
+    .faq{
+        padding: 1.2rem;
+    }
+/* ------footer------ */
+    .footer-container{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 8rem;
+    }
+}
+
+/* ----------media querry (phone)----------- */
+@media only screen and (max-width: 600px) {
+    .container{
+        width: var(--conatiner-width-sm);
+    }
+
+    .nav-menu{
+        right: 3%;
+    }
+
+    .nav-container img{
+        width: 3rem;
+    }
+
+    header{
+        height: 100vh;
+    }
+
+    .header-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .header-left p{
+        margin-bottom: 1.3rem;
+    }
+
+    .categories-right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .category{
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .category-icon{
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    .courses-container{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-1 p{
+        margin: 1rem auto;
+    }
+    .footer-socials{
+        justify-content: center;
+    }
 }
