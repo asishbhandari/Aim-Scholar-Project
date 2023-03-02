@@ -517,20 +517,11 @@ footer ul li a:hover{
     }
 
     .categories-left{
-        align-items: center;
+        text-align: center;
     }
     .header-left p{
         margin-bottom: 1.3rem;
     }
-
-    .categories-right{
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
-    }
-
-    .category{
-        padding: 1rem;
-        border-radius: 1rem;
     }
 
     .category-icon{
